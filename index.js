@@ -47,3 +47,23 @@ const pizzas = [
     ingredientes: ["Muzzarella", "Tomate", "Anana"],
   },
 ];
+
+// Punto 1:
+
+const idPares = pizzas.filter((pizzas) => {
+	return pizzas.id % 2 !== 0;
+});
+
+idPares.forEach((pizzas) => {
+console.log(` El producto ${pizzas.nombre} tiene id impar `);
+ });
+
+ //Punto 2:
+
+ const hayMenos = pizzas.filter((precio) => {
+	return pizzas.some ((id) => {
+    return pizzas.precio < precio;
+  } ;
+});
+
+console.log(` la pizza ${pizzas.nombre} vale menos de 600 `);
