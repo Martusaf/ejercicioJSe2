@@ -48,7 +48,7 @@ const pizzas = [
   },
 ];
 
-// Punto 1:
+// Punto A:
 
 const idPares = pizzas.filter((pizzas) => {
 	return pizzas.id % 2 !== 0;
@@ -58,12 +58,24 @@ idPares.forEach((pizzas) => {
 console.log(` El producto ${pizzas.nombre} tiene id impar `);
  });
 
- //Punto 2:
+ //Punto B:
 
- const hayMenos = pizzas.filter((precio) => {
-	return pizzas.some ((id) => {
-    return pizzas.precio < precio;
-  } ;
+ const preciosMenorA = (precio) => {
+	return pizzas.some((pizzas) => {
+		return pizzas.precio < precio;
+	})}
+
+		console.log(`Hay pizzas con precio menor a ${precio}`);
+
+
+//Punto C:
+
+const pizzaConPrecio = pizzas.filter(
+	(pizzas) => {
+		return pizzas.nombre && pizzas.precio;
+	}
+);
+
+pizzaConPrecio.forEach((pizzas) => {
+    console.log(`El producto ${pizzas.nombre}, que cuesta $${pizzas.precio}`); 
 });
-
-console.log(` la pizza ${pizzas.nombre} vale menos de 600 `);
